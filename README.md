@@ -221,6 +221,7 @@ npm test
 
 ## 10. Additional Documentation
 
+- [DEPLOYMENT_GUIDE.md](./DEPLOYMENT_GUIDE.md): Complete guide for deploying to Render (Backend) and Vercel (Frontend).
 - [MONGODB_SETUP_GUIDE.md](./MONGODB_SETUP_GUIDE.md): Detailed 11-step walkthrough for setting up MongoDB Atlas.
 - [AI_SETUP_GUIDE.md](./AI_SETUP_GUIDE.md): OpenAI, Gemini, Hugging Face, and fallback configuration.
 - [TROUBLESHOOTING.md](./TROUBLESHOOTING.md): Solutions for database connections, ports, CORS, and audio permissions.
