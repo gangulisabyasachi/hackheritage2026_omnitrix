@@ -1,7 +1,6 @@
 import mongoose from 'mongoose';
-import { MongoMemoryServer } from 'mongodb-memory-server';
 
-let mongoMemoryServer: MongoMemoryServer | null = null;
+let mongoMemoryServer: any = null;
 
 export const connectDB = async (): Promise<string> => {
   const uri = process.env.MONGODB_URI;
@@ -23,6 +22,7 @@ export const connectDB = async (): Promise<string> => {
   }
 
   try {
+    const { MongoMemoryServer } = require('mongodb-memory-server');
     mongoMemoryServer = await MongoMemoryServer.create();
     const memoryUri = mongoMemoryServer.getUri();
     await mongoose.connect(memoryUri);
