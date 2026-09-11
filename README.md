@@ -165,7 +165,7 @@ npm install
   ```env
   PORT=5001
   MONGODB_URI=
-  JWT_SECRET=REDACTED_JWT_SECRET
+  JWT_SECRET=your_jwt_secret_key_here
   AI_PROVIDER=rule_fallback
   ```
   *(Leave `MONGODB_URI` blank to use the instant in-memory embedded MongoDB, or see [MONGODB_SETUP_GUIDE.md](./MONGODB_SETUP_GUIDE.md) to connect MongoDB Atlas).*

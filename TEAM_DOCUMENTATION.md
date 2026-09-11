@@ -219,7 +219,7 @@ Create a `.env` file in `backend/`:
 PORT=5001
 NODE_ENV=development
 MONGODB_URI=mongodb+srv://<USERNAME>:<PASSWORD>@<CLUSTER>.mongodb.net/smriti_db?retryWrites=true&w=majority
-JWT_SECRET=REDACTED_JWT_SECRET
+JWT_SECRET=your_jwt_secret_key_here
 AI_PROVIDER=gemini
 GEMINI_API_KEY=your_gemini_api_key_here
 ```

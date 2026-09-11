@@ -41,7 +41,7 @@ A security modal titled **"Security Quickstart"** will appear prompting you to a
 
 1. Select **Username and Password** authentication.
 2. **Username**: Enter a simple username, e.g., `smriti_admin`.
-3. **Password**: Click **"Autogenerate Secure Password"** or enter a strong password (e.g., `Heritage2026Secure!`).
+3. **Password**: Click **"Autogenerate Secure Password"** or enter a strong password of your choice.
    > [!IMPORTANT]
    > Copy this password immediately and save it somewhere temporary. You will need it in Step 6.
 4. **Database Permissions**: Leave the default ("Read and write to any database").
@@ -73,10 +73,10 @@ In the same Quickstart dialog or under **Security > Network Access** in the left
    mongodb+srv://smriti_admin:<db_password>@cluster0.abcde.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
    ```
 5. Click the copy icon to copy this string.
-6. Replace `<db_password>` with the password you created in Step 4.
+6. Replace `<db_password>` with your actual password created in Step 4.
 7. Append the database name `smriti_db` before the `?` query parameters:
    ```text
-   mongodb+srv://smriti_admin:Heritage2026Secure!@cluster0.abcde.mongodb.net/smriti_db?retryWrites=true&w=majority
+   mongodb+srv://smriti_admin:<YOUR_PASSWORD>@cluster0.abcde.mongodb.net/smriti_db?retryWrites=true&w=majority
    ```
 
 ---
@@ -88,8 +88,8 @@ In the same Quickstart dialog or under **Security > Network Access** in the left
 3. Paste your full connection string:
    ```env
    PORT=5001
-   MONGODB_URI=mongodb+srv://smriti_admin:Heritage2026Secure!@cluster0.abcde.mongodb.net/smriti_db?retryWrites=true&w=majority
-   JWT_SECRET=REDACTED_JWT_SECRET
+   MONGODB_URI=mongodb+srv://smriti_admin:<YOUR_PASSWORD>@cluster0.abcde.mongodb.net/smriti_db?retryWrites=true&w=majority
+   JWT_SECRET=your_jwt_secret_key_here
    AI_PROVIDER=rule_fallback
    ```
 4. Save the file.
