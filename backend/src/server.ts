@@ -1,12 +1,10 @@
+import 'dotenv/config';
 import express from 'express';
 import cors from 'cors';
-import dotenv from 'dotenv';
 import { connectDB } from './config/db';
 import routes from './routes';
 import { errorHandler } from './middleware/errorHandler';
 import { seedDatabaseIfEmpty } from './seed/seedData';
-
-dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 5001;

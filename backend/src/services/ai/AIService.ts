@@ -7,29 +7,24 @@ import { Patient, Routine, Medication, Appointment, FamilyMember, Memory } from 
 import mongoose from 'mongoose';
 
 export class AIService {
-  private activeProvider: IAIProvider;
   private fallbackProvider: RuleBasedFallbackProvider;
 
   constructor() {
     this.fallbackProvider = new RuleBasedFallbackProvider();
-    const providerName = (process.env.AI_PROVIDER || 'rule_fallback').toLowerCase();
+  }
 
+  public getActiveProvider(): IAIProvider {
+    const providerName = (process.env.AI_PROVIDER || 'rule_fallback').toLowerCase();
     switch (providerName) {
       case 'openai':
-        this.activeProvider = new OpenAIProvider();
-        break;
+        return new OpenAIProvider();
       case 'gemini':
-        this.activeProvider = new GeminiProvider();
-        break;
+        return new GeminiProvider();
       case 'huggingface':
-        this.activeProvider = new HuggingFaceProvider();
-        break;
+        return new HuggingFaceProvider();
       default:
-        this.activeProvider = this.fallbackProvider;
-        break;
+        return this.fallbackProvider;
     }
-
-    console.log(`🤖 AI Service initialized with provider: ${this.activeProvider.name}`);
   }
 
   /**
@@ -89,8 +84,9 @@ export class AIService {
   ): Promise<{ response: string; provider: string }> {
     try {
       const context = await this.buildPatientContext(patientId);
-      const providerToUse = this.activeProvider.isAvailable()
-        ? this.activeProvider
+      const active = this.getActiveProvider();
+      const providerToUse = active.isAvailable()
+        ? active
         : this.fallbackProvider;
 
       const response = await providerToUse.generateAssistantResponse(query, context, language);
@@ -123,9 +119,8 @@ export class AIService {
     metrics: Record<string, any>,
     recentSessions: Array<any>
   ): Promise<string> {
-    const providerToUse = this.activeProvider.isAvailable()
-      ? this.activeProvider
-      : this.fallbackProvider;
+    const active = this.getActiveProvider();
+    const providerToUse = active.isAvailable() ? active : this.fallbackProvider;
     return providerToUse.generateCaregiverSummary(patientName, metrics, recentSessions);
   }
 
@@ -133,9 +128,8 @@ export class AIService {
     patientName: string,
     performanceTrends: Record<string, any>
   ): Promise<string> {
-    const providerToUse = this.activeProvider.isAvailable()
-      ? this.activeProvider
-      : this.fallbackProvider;
+    const active = this.getActiveProvider();
+    const providerToUse = active.isAvailable() ? active : this.fallbackProvider;
     return providerToUse.generateActivityRecommendation(patientName, performanceTrends);
   }
 }

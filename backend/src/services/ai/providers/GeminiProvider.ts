@@ -33,10 +33,13 @@ STRICT RULES:
 Context: ${JSON.stringify(context)}`;
 
     try {
-      const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${this.apiKey}`;
+      const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${this.apiKey}`;
       const response = await fetch(url, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: {
+          'Content-Type': 'application/json',
+          'x-goog-api-key': this.apiKey,
+        },
         body: JSON.stringify({
           contents: [
             {
@@ -48,13 +51,15 @@ Context: ${JSON.stringify(context)}`;
       });
 
       if (!response.ok) {
+        console.warn(`Gemini API returned status ${response.status}. Using grounded fallback engine.`);
         return this.fallback.generateAssistantResponse(query, context, language);
       }
 
       const data: any = await response.json();
       const text = data.candidates?.[0]?.content?.parts?.[0]?.text;
       return text?.trim() || this.fallback.generateAssistantResponse(query, context, language);
-    } catch {
+    } catch (err: any) {
+      console.warn(`Gemini request error (${err.message}). Using grounded fallback engine.`);
       return this.fallback.generateAssistantResponse(query, context, language);
     }
   }
