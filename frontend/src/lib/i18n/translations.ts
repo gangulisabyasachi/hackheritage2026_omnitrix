@@ -88,7 +88,7 @@ export interface Translations {
 
 export const translations: Record<SupportedLanguage, Translations> = {
   en: {
-    appName: 'Smriti NER',
+    appName: 'NeuroMitra (Smriti NER)',
     tagline: 'Cognitive Gaming & Memory Assistance for the North East',
     disclaimer:
       'This platform is designed for cognitive engagement, memory assistance, and activity monitoring. It does not replace professional medical diagnosis or treatment.',
@@ -175,7 +175,7 @@ export const translations: Record<SupportedLanguage, Translations> = {
   },
 
   as: {
-    appName: 'স্মৃতি (Smriti NER)',
+    appName: 'NeuroMitra — স্মৃতি (Smriti NER)',
     tagline: 'উত্তৰ-পূৰ্বাঞ্চলৰ বয়োজ্যেষ্ঠসকলৰ জ্ঞানমূলক খেল আৰু স্মৃতি সহায়ক মঞ্চ',
     disclaimer:
       'এই প্লেটফৰ্মটো মানসিক সক্ৰিয়তা, স্মৃতিশক্তিৰ অনুশীলন আৰু দৈনন্দিন কাৰ্যসূচীৰ সহায়ৰ বাবে তৈয়াৰ কৰা হৈছে। ই কোনো চিকিৎসা নিদান বা চিকিৎসকৰ বিকল্প নহয়।',
@@ -262,7 +262,7 @@ export const translations: Record<SupportedLanguage, Translations> = {
   },
 
   hi: {
-    appName: 'स्मृति (Smriti NER)',
+    appName: 'NeuroMitra — स्मृति (Smriti NER)',
     tagline: 'पूर्वोत्तर भारत के वरिष्ठ नागरिकों के लिए संज्ञानात्मक खेल एवं स्मृति सहायता',
     disclaimer:
       'यह मंच संज्ञानात्मक सक्रियता, स्मृति अभ्यास और दैनिक सहायता के लिए बनाया गया है। यह किसी चिकित्सीय निदान या डॉक्टर का विकल्प नहीं है।',
@@ -349,7 +349,7 @@ export const translations: Record<SupportedLanguage, Translations> = {
   },
 
   bn: {
-    appName: 'স্মৃতি (Smriti NER)',
+    appName: 'NeuroMitra — স্মৃতি (Smriti NER)',
     tagline: 'উত্তর-পূর্বাঞ্চলের প্রবীণদের জন্য জ্ঞানমূলক খেলা ও স্মৃতি সহায়ক প্ল্যাটফর্ম',
     disclaimer:
       'এই প্ল্যাটফর্মটি মানসিক সচেতনতা, স্মৃতি অনুশীলন এবং দৈনন্দিন সহায়তার জন্য নির্মিত। এটি পেশাদার চিকিৎসার বিকল্প নয়।',

@@ -26,7 +26,7 @@ export const startServer = async () => {
 
     const server = app.listen(PORT, () => {
       console.log(`====================================================`);
-      console.log(`🌸 SMRITI NER - Cognitive Gaming & Memory Platform 🌸`);
+      console.log(`🌸 NEUROMITRA (Smriti NER) — Cognitive Gaming Platform 🌸`);
       console.log(`🚀 Backend API Server running on port: ${PORT}`);
       console.log(`🔗 Health Check: http://localhost:${PORT}/api/health`);
       console.log(`====================================================`);

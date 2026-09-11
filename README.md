@@ -1,5 +1,6 @@
-# Smriti NER (স্মৃতি) 🌸
+# NeuroMitra — Smriti NER (স্মৃতি) 🌸
 ### AI-Based Cognitive Gaming and Memory Assistance Platform for Elderly Dementia Patients in the North Eastern Region (NER)
+**HackHeritage 2026 | Team NeuroMitra**
 
 [![Next.js](https://img.shields.io/badge/Next.js-14.2-black?logo=next.js)](https://nextjs.org/)
 [![React](https://img.shields.io/badge/React-18.3-blue?logo=react)](https://react.dev/)
@@ -8,7 +9,7 @@
 [![Express](https://img.shields.io/badge/Express-4.21-lightgrey?logo=express)](https://expressjs.com/)
 [![MongoDB](https://img.shields.io/badge/MongoDB-Atlas%20%2F%20Mongoose-brightgreen?logo=mongodb)](https://www.mongodb.com/)
 [![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-3.4-38bdf8?logo=tailwind-css)](https://tailwindcss.com/)
-[![HackHeritage](https://img.shields.io/badge/HackHeritage-2026-crimson)](https://github.com/gangulisabyasachi/hackheritage2026_omnitrix)
+[![Team NeuroMitra](https://img.shields.io/badge/Team-NeuroMitra-crimson)](https://github.com/gangulisabyasachi/hackheritage2026_omnitrix)
 
 ---
 

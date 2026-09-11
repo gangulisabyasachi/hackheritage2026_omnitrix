@@ -114,7 +114,7 @@ In the **Environment Variables** section, add:
 1. Click **"Deploy"**.
 2. Vercel will run `next build`, generate static pages, and deploy to their global CDN (~1 minute).
 3. Once complete, click **"Continue to Dashboard"** or click the preview thumbnail to visit your live site!
-   (e.g., `https://hackheritage2026-omnitrix.vercel.app` or `https://smriti-ner.vercel.app`).
+   (e.g., `https://neuromitra.vercel.app` or `https://smriti-ner.vercel.app`).
 
 ---
 

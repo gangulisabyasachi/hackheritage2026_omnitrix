@@ -1,6 +1,6 @@
-# Smriti NER (স্মৃতি) — Platform Master Documentation
+# NeuroMitra (Smriti NER) — Platform Master Documentation
 ### AI-Based Cognitive Gaming & Memory Assistance Platform for Elderly Dementia Patients in the North Eastern Region (NER)
-**HackHeritage 2026 | Team Omnitrix**
+**HackHeritage 2026 | Team NeuroMitra**
 
 ---
 

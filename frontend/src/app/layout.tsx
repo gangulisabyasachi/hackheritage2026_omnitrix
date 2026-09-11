@@ -4,11 +4,11 @@ import { LanguageProvider } from '@/lib/i18n/LanguageContext';
 import { Navbar } from '@/components/common/Navbar';
 
 export const metadata: Metadata = {
-  title: 'Smriti NER — Cognitive Gaming & Memory Assistance Platform',
+  title: 'NeuroMitra (Smriti NER) — Cognitive Gaming & Memory Assistance Platform',
   description:
-    'AI-Based Cognitive Gaming and Memory Assistance Platform for Elderly Dementia Patients in the North Eastern Region (NER)',
+    'AI-Based Cognitive Gaming and Memory Assistance Platform for Elderly Dementia Patients in the North Eastern Region (NER) by Team NeuroMitra',
   keywords:
-    'cognitive engagement, dementia care, elderly assistance, North East India, Assam, memory games, adaptive AI',
+    'NeuroMitra, cognitive engagement, dementia care, elderly assistance, North East India, Assam, memory games, adaptive AI',
 };
 
 export default function RootLayout({
@@ -26,7 +26,7 @@ export default function RootLayout({
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
               <div>
                 <p className="font-semibold text-stone-100 text-base">
-                  Smriti NER (স্মৃতি) — HackHeritage 2026
+                  NeuroMitra — Smriti NER (স্মৃতি) | HackHeritage 2026
                 </p>
                 <p className="text-stone-400 text-xs mt-1">
                   Empowering elderly cognitive wellness, memory recall, and caregiver connection across North East India.
