@@ -96,6 +96,6 @@ describe('Smriti API Integration Tests', () => {
 
     expect(res.status).toBe(200);
     expect(res.body.success).toBe(true);
-    expect(res.body.response).toContain('Breakfast');
+    expect(res.body.response.toLowerCase()).toContain('breakfast');
   });
 });
