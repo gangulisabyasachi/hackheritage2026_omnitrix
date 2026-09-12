@@ -88,7 +88,7 @@ export interface Translations {
 
 export const translations: Record<SupportedLanguage, Translations> = {
   en: {
-    appName: 'NeuroMitra (Smriti NER)',
+    appName: 'NeuroMitra',
     tagline: 'Cognitive Gaming & Memory Assistance for the North East',
     disclaimer:
       'This platform is designed for cognitive engagement, memory assistance, and activity monitoring. It does not replace professional medical diagnosis or treatment.',

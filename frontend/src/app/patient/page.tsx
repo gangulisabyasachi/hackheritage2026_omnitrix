@@ -237,11 +237,10 @@ export default function PatientHomePage() {
                     <button
                       key={r._id || i}
                       onClick={() => toggleCheckItem(r._id || i)}
-                      className={`w-full touch-target text-left p-4 rounded-2xl border transition-all flex items-center justify-between ${
-                        isDone
+                      className={`w-full touch-target text-left p-4 rounded-2xl border transition-all flex items-center justify-between ${isDone
                           ? 'bg-stone-50/80 border-stone-200 text-stone-400'
                           : 'bg-amber-50/40 hover:bg-amber-50 border-amber-100 text-stone-800'
-                      }`}
+                        }`}
                     >
                       <div className="flex items-center gap-3.5">
                         {isDone ? (
@@ -298,11 +297,10 @@ export default function PatientHomePage() {
                     <button
                       key={rem._id || i}
                       onClick={() => toggleCheckItem(`rem_${rem._id || i}`)}
-                      className={`w-full touch-target text-left p-4 rounded-2xl border transition-all flex items-center justify-between ${
-                        isDone
+                      className={`w-full touch-target text-left p-4 rounded-2xl border transition-all flex items-center justify-between ${isDone
                           ? 'bg-stone-50/80 border-stone-200 text-stone-400'
                           : 'bg-rose-50/40 hover:bg-rose-50 border-rose-100 text-stone-800'
-                      }`}
+                        }`}
                     >
                       <div className="flex items-center gap-3.5">
                         {rem.type === 'hydration' ? (
