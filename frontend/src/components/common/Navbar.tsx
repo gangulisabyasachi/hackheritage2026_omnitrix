@@ -17,6 +17,7 @@ import {
   Menu,
   X,
   LogOut,
+  Workflow,
 } from 'lucide-react';
 import { api } from '@/lib/api';
 
@@ -53,6 +54,7 @@ export const Navbar: React.FC = () => {
   const isPatientView = pathname.startsWith('/patient');
   const isCaregiverView = pathname.startsWith('/caregiver');
   const isHealthcareView = pathname.startsWith('/healthcare');
+  const isFlowchartView = pathname.startsWith('/flowchart');
 
   return (
     <header className="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-amber-100 shadow-sm transition-all">
@@ -117,6 +119,18 @@ export const Navbar: React.FC = () => {
             >
               <Stethoscope className="w-4 h-4" />
               {t.roles.clinician}
+            </Link>
+
+            <Link
+              href="/flowchart"
+              className={`px-4 py-2 rounded-xl text-sm font-semibold flex items-center gap-2 transition-all ${
+                isFlowchartView
+                  ? 'bg-amber-600 text-white shadow-sm'
+                  : 'text-stone-700 hover:text-amber-700 hover:bg-stone-100'
+              }`}
+            >
+              <Workflow className="w-4 h-4" />
+              Flowchart
             </Link>
           </nav>
 
@@ -223,6 +237,17 @@ export const Navbar: React.FC = () => {
             >
               <Stethoscope className="w-5 h-5" />
               {t.roles.clinician}
+            </Link>
+
+            <Link
+              href="/flowchart"
+              onClick={() => setMobileMenuOpen(false)}
+              className={`p-3 rounded-xl font-bold flex items-center gap-3 ${
+                isFlowchartView ? 'bg-amber-600 text-white' : 'bg-stone-100 text-stone-800'
+              }`}
+            >
+              <Workflow className="w-5 h-5" />
+              Architecture Flowchart
             </Link>
           </div>
 

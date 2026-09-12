@@ -19,6 +19,7 @@ import {
   Activity,
   ArrowRight,
   Key,
+  Workflow,
 } from 'lucide-react';
 
 export default function HomePage() {
@@ -63,8 +64,20 @@ export default function HomePage() {
             A personalized, adaptive cognitive gaming platform designed for elderly dementia patients, their devoted caregivers, and healthcare workers across Assam and the North East.
           </p>
 
+          {/* Flowchart Architecture Quick Link */}
+          <div className="pt-2 flex justify-center">
+            <Link
+              href="/flowchart"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-2xl bg-amber-100/90 hover:bg-amber-200 text-amber-900 border border-amber-300 text-xs sm:text-sm font-bold shadow-xs transition-all hover:scale-105"
+            >
+              <Workflow className="w-4 h-4 text-amber-700" />
+              <span>Explore Interactive System Architecture & Flowchart</span>
+              <ArrowRight className="w-4 h-4 text-amber-700" />
+            </Link>
+          </div>
+
           {/* Quick Portal Switcher Cards */}
-          <div className="pt-6 grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
+          <div className="pt-4 grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
             {/* 1. Patient Portal */}
             <div className="bg-white rounded-3xl p-6 sm:p-8 border-2 border-amber-200 shadow-md hover:shadow-xl hover:border-amber-400 transition-all flex flex-col justify-between group">
               <div>
